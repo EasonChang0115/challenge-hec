@@ -1,0 +1,15 @@
+@import './index.scss';
+
+// components
+@import './components/_header.scss';
+@import './components/_footer.scss';
+@import './components/_product_card.scss';
+@import './components/_pagination.scss';
+
+// pages
+@import './components/pages/_home.scss';
+@import './components/pages/_products.scss';
+@import './components/pages/_login.scss';
+@import './components/pages/_cart.scss';
+@import './components/pages/_checkout.scss';
+@import './components/pages/_payment_success.scss';

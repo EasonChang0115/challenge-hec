@@ -1,0 +1,76 @@
+// scss參數
+@import './function.scss';
+@import './variable.scss';
+
+.product_card {
+  width: 100%;
+  border: 1px solid $color-light-gray;
+  .top_block {
+    width: 100%;
+    .tag {
+      font-size: 16px;
+      writing-mode: vertical-lr;
+      background-color: $color-green;
+      color: white;
+      position: absolute;
+      top: 0px;
+      left: 20px;
+      letter-spacing: 2px;
+      padding: 12px 8px;
+      z-index: 2;
+    }
+    .heart {
+      font-size: 16px;
+      color: $color-green;
+      position: absolute;
+      top: 20px;
+      right: 18px;
+      z-index: 2;
+    }
+    .product_img {
+      width: 100%;
+      height: 315px;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+    }
+  }
+  .bottom_block {
+    display: flex;
+    border: 1px solid $color-light-gray;
+    .product_name {
+      padding: 15px 0px;
+      width: calc(100% - 127px);
+      text-align: center;
+      font-size: 22px;
+      font-weight: lighter;
+      color: $color-green;
+      border-right: 1px solid $color-light-gray;
+    }
+    .price {
+      padding: 15px 0px;
+      width: 127px;
+      color: $color-green;
+      font-size: 22px;
+      font-weight: bold;
+      text-align: center;
+    }
+  }
+  button.btn.btn_addCart {
+    border: none;
+    outline: none;
+    width: 100%;
+    background-color: $color-light-gray;
+    color: $color-green;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    padding: 16px 0px;
+    cursor: pointer;
+    transition: .3s;
+    &:hover {
+      color: $color-light-gray;
+      background-color: $color-green;
+    }
+  }
+}

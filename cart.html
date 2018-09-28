@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="zh_TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="./dist/css/main.css">
+	<title>甜點電商-購物車頁</title>
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+  <div class="wrapper">
+    <header class="my_header">
+      <div class="container">
+        <label class="nav-humberger" for="nav-controller">
+          <i class="material-icons">dehaze</i>
+        </label>
+        <input type="checkbox" id="nav-controller">
+        <nav class="nav-bar nav-ipad">
+          <div class="nav-close">
+            <label for="nav-controller">
+              <i class="material-icons">clear</i>
+            </label>
+          </div>
+          <ul class="nav-list">
+            <li class="nav-item">
+              <a href="./">首頁</a>
+            </li>
+            <li class="nav-item">
+              <a href="./products.html">甜點</a>
+            </li>
+            <li class="nav-item">
+              <a href="./login.html">登入</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="logo">
+          <img src="./src/images/logo-all-dark.svg" alt="">
+        </div>
+        <nav class="nav-bar">
+          <ul class="nav-list">
+            <li class="nav-item">
+              <a href="./">首頁</a>
+            </li>
+            <li class="nav-item">
+              <a href="./products.html">甜點</a>
+            </li>
+            <li class="nav-item">
+              <a href="./login.html">登入</a>
+            </li>
+          </ul>
+          <div class="cart">
+            <a href="./cart.html">
+							<i class="material-icons">shopping_cart</i>
+						</a>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <div class="cart_page">
+      <div class="container">
+        <div class="your-cart">
+          <h2>您的購物車</h2>
+          <div class="cart-product-list">
+
+            <div class="cart-product">
+              <div class="product-information">
+                <div class="product-img" style="background-image: url('./src/images/cart-img1.jpg')"></div>
+                <div class="product-controller">
+                  <div class="product-name">焦糖瑪卡龍<span class="product-price">NT$ 450</span></div>
+                  <div class="product-num">
+                    <button class="btn">-</button>
+                    <div class="number">2</div>
+                    <button class="btn">+</button>
+                  </div>
+                </div>
+              </div>
+              <div class="price-block">
+                <div class="price">NT$ 900</div>
+                <i class="material-icons">delete_outline</i>
+              </div>
+              <div class="sperate"></div>
+            </div>
+
+            <div class="cart-product">
+              <div class="product-information">
+                <div class="product-img" style="background-image: url('./src/images/cart-img2.jpg')"></div>
+                <div class="product-controller">
+                  <div class="product-name">焦糖瑪卡龍<span class="product-price">NT$ 450</span></div>
+                  <div class="product-num">
+                    <button class="btn">-</button>
+                    <div class="number">2</div>
+                    <button class="btn">+</button>
+                  </div>
+                </div>
+              </div>
+              <div class="price-block">
+                <div class="price">NT$ 900</div>
+                <i class="material-icons">delete_outline</i>
+              </div>
+              <div class="sperate"></div>
+            </div>
+
+            <div class="cart-product">
+              <div class="product-information">
+                <div class="product-img" style="background-image: url('./src/images/cart-img3.jpg')"></div>
+                <div class="product-controller">
+                  <div class="product-name">焦糖瑪卡龍<span class="product-price">NT$ 450</span></div>
+                  <div class="product-num">
+                    <button class="btn">-</button>
+                    <div class="number">2</div>
+                    <button class="btn">+</button>
+                  </div>
+                </div>
+              </div>
+              <div class="price-block">
+                <div class="price">NT$ 900</div>
+                <i class="material-icons">delete_outline</i>
+              </div>
+              <div class="sperate"></div>
+            </div>
+
+
+          </div>
+        </div>
+        <div class="order-information">
+          <div class="order-box">
+            <h3>訂單摘要</h3>
+            <hr class="ipad-none">
+            <div class="price">
+              <div class="subtotal">
+                <span>小計</span><span>NT$ 2,700</span>
+              </div>
+              <div class="freight">
+                <span>運費</span><span>NT$ 300</span>
+              </div>
+            </div>
+            <div class="total-price">
+              <span>總計</span><span>NT$ 3,000</span>
+            </div>
+          </div>
+          <a href="./checkout.html" class="btn send-btn">結帳</a>
+        </div>
+      </div>
+    </div>
+    <footer class="my_footer">
+			<div class="send_mail">
+				<div class="container">
+					<div class="logo_left">
+						<div class="logo">
+							<img src="./src/images/logo-light.svg" width="100%" alt="">
+						</div>
+						<p>訂閱你我的甜蜜郵件</p>
+					</div>
+					<div class="input_right">
+						<div class="mail_icon">
+							<i class="material-icons">email</i>
+						</div>
+						<input type="text" />
+						<button class="btn send_btn">➜</button>
+					</div>
+				</div>
+			</div>
+			<div class="footer_bottom">
+				<div class="container">
+					<div class="content">
+						<div class="left">
+							<div class="logo_text">
+								<img src="./src/images/logo_text.svg" width="100%" alt="">
+							</div>
+							<div class="information">
+								<div class="tel">07-12345678</div>
+								<div class="mail">sweetaste@email.com</div>
+								<div class="address">800 高雄市新興區幸福路 520 號 </div>
+							</div>
+						</div>
+						<div class="right">
+							<div class="img-text" style="background-image: url('./src/images/footer_text_img.svg')"></div>
+						</div>
+					</div>
+					<div class="copyright">
+						<div class="social">
+							<img class="line-img" src="./src/images/ic-line@.svg" alt="">
+							<img class="fb-img" src="./src/images/ic-facebook.svg" alt="">
+						</div>
+						<div class="copyright_text">© 2018 Sweetaste* All Rights Reserved</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+  </div>
+</body>
+</html>

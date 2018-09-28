@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="zh_TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="./dist/css/main.css">
+	<title>甜點電商-確認訂單</title>
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+  <div class="wrapper">
+    <header class="my_header">
+      <div class="container">
+        <label class="nav-humberger" for="nav-controller">
+          <i class="material-icons">dehaze</i>
+        </label>
+        <input type="checkbox" id="nav-controller">
+        <nav class="nav-bar nav-ipad">
+          <div class="nav-close">
+            <label for="nav-controller">
+              <i class="material-icons">clear</i>
+            </label>
+          </div>
+          <ul class="nav-list">
+            <li class="nav-item">
+              <a href="./">首頁</a>
+            </li>
+            <li class="nav-item">
+              <a href="./products.html">甜點</a>
+            </li>
+            <li class="nav-item">
+              <a href="./login.html">登入</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="logo">
+          <img src="./src/images/logo-all-dark.svg" alt="">
+        </div>
+        <nav class="nav-bar">
+          <ul class="nav-list">
+            <li class="nav-item">
+              <a href="./">首頁</a>
+            </li>
+            <li class="nav-item">
+              <a href="./products.html">甜點</a>
+            </li>
+            <li class="nav-item">
+              <a href="./login.html">登入</a>
+            </li>
+          </ul>
+          <div class="cart">
+            <a href="./cart.html">
+							<i class="material-icons">shopping_cart</i>
+						</a>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <div class="container">
+      <div class="check-page">
+        <div id="app">
+          <div class="step-block">
+            <div class="top-bar">
+              <h2 class="step-title" v-cloak>{{ stepTitle[step].title }}</h2>
+              <div class="progerss">
+                <div class="circle" :class="{
+                  active: step === 0,
+                  completed: stepTitle[0].complete
+                }"></div>
+                <div class="circle" :class="{
+                  active: step === 1,
+                  completed: stepTitle[1].complete
+                }"></div>
+                <div class="circle" :class="{
+                  active: step === 2,
+                  completed: stepTitle[2].complete
+                }"></div>
+                <div class="bar"></div>
+              </div>
+            </div>
+            <keep-alive>
+              <component :is="stepTitle[step].component" :nextstep="NextStep"></component>
+            </keep-alive>
+          </div>
+        </div>
+        <div class="order-information">
+          <div class="summary">
+            <h3>訂單摘要</h3>
+            <div class="price">
+              <div class="subtotal">
+                <span>小計</span><span>NT$ 2,700</span>
+              </div>
+              <div class="freight">
+                <span>運費</span><span>NT$ 300</span>
+              </div>
+            </div>
+            <div class="total-price">
+              <span>總計</span><span>NT$ 3,000</span>
+            </div>
+          </div>
+          <div class="order-block">
+            <h3>購物清單</h3>
+            <div class="order-list">
+              <div class="product">
+                <div class="product-img" style="background-image: url('./src/images/cart-img1.jpg')"></div>
+                <div class="product-information">
+                  <div class="product-name">焦糖馬卡龍<span>（2）</span></div>
+                  <div class="product-price">NT$ 900</div>
+                </div>
+              </div>
+              <div class="product">
+                <div class="product-img" style="background-image: url('./src/images/cart-img2.jpg')"></div>
+                <div class="product-information">
+                  <div class="product-name">焦糖馬卡龍<span>（2）</span></div>
+                  <div class="product-price">NT$ 900</div>
+                </div>
+              </div>
+              <div class="product">
+                <div class="product-img" style="background-image: url('./src/images/cart-img3.jpg')"></div>
+                <div class="product-information">
+                  <div class="product-name">焦糖馬卡龍<span>（2）</span></div>
+                  <div class="product-price">NT$ 900</div>
+                </div>
+              </div>
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="my_footer">
+			<div class="send_mail">
+				<div class="container">
+					<div class="logo_left">
+						<div class="logo">
+							<img src="./src/images/logo-light.svg" width="100%" alt="">
+						</div>
+						<p>訂閱你我的甜蜜郵件</p>
+					</div>
+					<div class="input_right">
+						<div class="mail_icon">
+							<i class="material-icons">email</i>
+						</div>
+						<input type="text" />
+						<button class="btn send_btn">➜</button>
+					</div>
+				</div>
+			</div>
+			<div class="footer_bottom">
+				<div class="container">
+					<div class="content">
+						<div class="left">
+							<div class="logo_text">
+								<img src="./src/images/logo_text.svg" width="100%" alt="">
+							</div>
+							<div class="information">
+								<div class="tel">07-12345678</div>
+								<div class="mail">sweetaste@email.com</div>
+								<div class="address">800 高雄市新興區幸福路 520 號 </div>
+							</div>
+						</div>
+						<div class="right">
+							<div class="img-text" style="background-image: url('./src/images/footer_text_img.svg')"></div>
+						</div>
+					</div>
+					<div class="copyright">
+						<div class="social">
+							<img class="line-img" src="./src/images/ic-line@.svg" alt="">
+							<img class="fb-img" src="./src/images/ic-facebook.svg" alt="">
+						</div>
+						<div class="copyright_text">© 2018 Sweetaste* All Rights Reserved</div>
+					</div>
+				</div>
+			</div>
+    </footer>
+
+
+
+    <template id="template1">
+      <form class="my-form" action="">
+        <div class="row">
+          <div class="col-6 mb-16">
+            <label for="">姓氏</label>
+            <input type="text" class="my-input" placeholder="王"/>
+          </div>
+          <div class="col-6 mb-16">
+            <label for="">名字</label>
+            <input type="text" class="my-input" placeholder="小明"/>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 mb-16">
+            <label for="">電話</label>
+            <input type="tel" class="my-input" placeholder="0912-345-678"/>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 m-0">
+            <label for="">地址</label>
+          </div>
+          <div class="col-6 mb-8">
+            <select class="my-select">
+              <option value="高雄市">高雄市</option>
+            </select>
+          </div>
+          <div class="col-6 mb-8">
+            <select class="my-select">
+              <option value="新興區">新興區</option>
+            </select>
+          </div>
+          <div class="col-12 mb-16">
+            <input type="text" class="my-input" placeholder="幸福路 520 號"/>
+          </div>
+        </div>
+        <div class="btn send-btn" v-on:click="nextstep">下一步</div>
+      </form>
+    </template>
+    <template id="template2">
+      <form class="my-form" action="">
+        <div class="row">
+          <div class="col-12 mb-16">
+            <label for="">信用卡卡號</label>
+            <input type="tel" class="my-input" placeholder="9012-3456-7890-1234"/>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 m-0">
+            <label for="">持卡人姓名</label>
+          </div>
+          <div class="col-6 mb-16">
+            <input type="text" class="my-input" placeholder="王"/>
+          </div>
+          <div class="col-6 mb-16">
+            <input type="text" class="my-input" placeholder="小明"/>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 m-0">
+            <label for="">有效期限</label>
+          </div>
+          <div class="col-6 mb-16">
+            <select class="my-select">
+              <option value="0" disabled>月</option>
+              <option value="1">1月</option>
+              <option value="2">2月</option>
+              <option value="3">3月</option>
+            </select>
+          </div>
+          <div class="col-6 mb-16">
+            <select class="my-select">
+              <option value="0" disabled>年</option>
+              <option value="107">107年</option>
+              <option value="108">108年</option>
+              <option value="109">109年</option>
+            </select>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 m-0">
+            <label for="">背面末三碼</label>
+          </div>
+          <div class="col-6 mb-16">
+            <input type="text" class="my-input" placeholder="123"/>
+          </div>
+        </div>
+        <div class="btn send-btn" v-on:click="nextstep">下一步</div>
+      </form>
+    </template>
+    <template id="template3">
+      <form class="my-form" action="">
+        <div class="invoice-type">
+          <button class="btn" :class="{active: invoiceType === 'electronic'}" @click="changeInvoiceType">電子發票</button>
+          <button class="btn" :class="{active: invoiceType === 'mailing'}" @click="changeInvoiceType">郵寄發票</button>
+        </div>
+        <template v-if="invoiceType === 'electronic'">
+          <div class="row">
+            <div class="col-12 mb-16">
+              <label for="">電子郵件信箱</label>
+              <input type="email" class="my-input" placeholder="9012-3456-7890-1234"/>
+            </div>
+          </div>
+        </template>
+        <template v-if="invoiceType === 'mailing'">
+          <div class="row">
+            <div class="col-12 m-0">
+              <label for="">地址</label>
+            </div>
+            <div class="col-6 mb-8">
+              <select class="my-select">
+                <option value="高雄市">高雄市</option>
+              </select>
+            </div>
+            <div class="col-6 mb-8">
+              <select class="my-select">
+                <option value="新興區">新興區</option>
+              </select>
+            </div>
+            <div class="col-12 mb-16">
+              <input type="text" class="my-input" placeholder="幸福路 520 號"/>
+            </div>
+          </div>
+        </template>
+        <div class="row">
+          <div class="col-12 mb-16">
+            <label for="">統一編號（選填）</label>
+            <input type="tel" class="my-input" placeholder="12345678"/>
+          </div>
+        </div>
+        
+        <a href="./payment_success.html" class="btn send-btn">確認結帳</a>
+      </form>
+    </template>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17/vue.js"></script>
+  <script src="./dist/js/main.js"></script>
+</body>
+</html>

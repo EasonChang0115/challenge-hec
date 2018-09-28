@@ -1,0 +1,14 @@
+// scss參數
+@import './function.scss';
+@import './variable.scss';
+
+input.my-input, select.my-select{
+  width: 100%;
+  border: none;
+  outline: none;
+  height: 56px;
+  background-color: $color-light-gray;
+  font-size: 16px;
+  color: $color-gray;
+  padding: 17px 20px;
+}

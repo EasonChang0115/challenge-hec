@@ -1,0 +1,160 @@
+// scss參數
+@import './function.scss';
+@import './variable.scss';
+
+footer.my_footer {
+  width: 100%;
+  .send_mail {
+    width: 100%;
+    padding: 30px 0px;
+    background-color: $color-green;
+    .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 120px;
+    }
+    .logo_left {
+      display: flex;
+      align-items: center;
+      font-size: 24px;
+      width: 276px;
+      text-align-last: left;
+      color: white;
+      .logo {
+        width: 40px;
+        height: 40px;
+        margin-right: 20px;
+      }
+    }
+    .input_right {
+      width: 380px;
+      height: 56px;
+      background-color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .mail_icon {
+        color: $color-green;
+        width: 24px;
+        height: 24px;
+        font-size: 24px;
+        margin-left: 20px;
+      }
+      input {
+        outline: none;
+        border: none;
+        height: 40px;
+        padding: 0 15px;
+        width: calc(100% - 108px);
+        font-size: 16px;
+      }
+      button.btn.send_btn {
+        outline: none;
+        border: none;
+        cursor: pointer;
+        height: 100%;
+        width: 64px;
+        background-color: $color-yellow;
+        color: $color-green;
+      }
+    }
+    @media screen and (max-width: $media-size-ipad) {
+      .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0 30px;
+      }
+      .logo_left {
+        margin-bottom: 25px;
+      }
+      .input_right {
+        width: 100%;
+      }
+    }
+  }
+  .footer_bottom {
+    background-color: $color-light-gray;
+    .content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 30px 90px;
+      .left {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 220px;
+        .logo_text {
+          width: 170px;
+        }
+        .information {
+          color: $color-green;
+          font-size: 16px;
+          letter-spacing: 1px;
+          .mail {
+            margin: 8px 0;
+          }
+        }
+      }
+      .right {
+        .img-text {
+          width: 60px;
+          height: 220px;
+          background-repeat: no-repeat;
+          background-size: contain;
+          background-position: center;
+        }
+      }
+    }
+    .copyright {
+      display: flex;
+      justify-content: space-between;
+      padding: 0px 90px 30px 90px;
+      .copyright_text {
+        font-size: 16px;
+        font-weight: normal;
+        font-family: serif;
+        color: $color-green;
+        display: flex;
+        align-items: flex-end;
+      }
+      .social {
+        display: flex;
+        img {
+          width: 32px;
+          height: 32px;
+          &.line-img {
+            margin-right: 8px;
+          }
+        }
+      }
+    }
+    @media screen and (max-width: $media-size-ipad) {
+      .content {
+        padding: 30px;
+        .left {
+          height: auto;
+          .logo_text {
+            margin-bottom: 40px;
+          }
+        }
+        .right {
+          display: none;
+        }
+      }
+      .copyright {
+        padding: 0 30px 30px;
+        flex-wrap: wrap;
+        .social {
+          width: 100%;
+        }
+        .copyright_text {
+          width: 100%;
+          margin-top: 25px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,151 @@
+// scss參數
+@import './function.scss';
+@import './variable.scss';
+
+header.my_header {
+  width: 100%;
+  padding: 30px 0;
+  background-color: white;
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .logo {
+    width: 218px;
+    height: 40px;
+  }
+  nav.nav-bar {
+    display: flex;
+    align-items: center;
+    &.nav-ipad {
+      display: none;
+    }
+    ul.nav-list {
+      margin: 0;
+      height: 100%;
+      list-style: none;
+      display: flex;
+      align-items: center;
+      li.nav-item {
+        margin: 0px 30px;
+        a {
+          font-size: 18px;
+          font-weight: 900;
+          text-align: center;
+          color: $color-green;
+        }
+        &:after {
+          content: '';
+          width: 0;
+          height: 2px;
+          background-color: $color-green;
+          position: absolute;
+          top: 100%;
+          left: 50%;
+          transition: .3s;
+        }
+        &:hover {
+          &:after {
+            left: 0%;
+            width: 100%;
+          }
+        }
+      }
+    }
+    .cart {
+      margin-left: 40px;
+      i {
+        color: $color-green;
+        font-size: 24px;
+      }
+    }
+  }
+  label.nav-humberger {
+    display: none;
+    cursor: pointer;
+  }
+  input#nav-controller {
+    display: none;
+    &:checked {
+      ~ .nav-bar.nav-ipad {
+        left: 0px;
+      }
+    }
+  }
+  @media screen and (max-width: $media-size-ipad){
+    padding: 30px 30px;
+    nav.nav-bar {
+      ul.nav-list {
+        display: none;
+      }
+      .cart {
+        margin: 0;
+      }
+    }
+    nav.nav-bar.nav-ipad {
+      display: inline-block;
+      position: fixed;
+      height: 100%;
+      width: 200px;
+      top: 0;
+      left: -200px;
+      background-color: $color-green;
+      transition: .3s;
+      z-index: 99;
+      .nav-close {
+        width: 100%;
+        display: inline-block;
+        text-align: right;
+        padding: 15px;
+        i {
+          color: white;
+          cursor: pointer;
+        }
+      }
+      .nav-list {
+        width: 100%;   
+        display: block;   
+        .nav-item {
+          margin: 16px 0px;
+          a {
+            display: inline-block;
+            width: 100%;
+            font-size: 24px;
+            font-weight: normal;
+            letter-spacing: 25px;
+            color: white;
+            text-align: center;
+          }
+          &:after {
+            content: '';
+            width: 0;
+            height: 2px;
+            background-color: white;
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transition: .3s;
+          }
+          &:hover {
+            &:after {
+              left: 0%;
+              width: 100%;
+            }
+          }
+        }
+        
+      }
+    }
+    .logo {
+      width: px-to-vw(218px, 768px);
+      min-width: 115px;
+      height: auto;
+    }
+    label.nav-humberger {
+      display: block;
+      font-size: 24px;
+      color: $color-green;
+    }
+  }
+}

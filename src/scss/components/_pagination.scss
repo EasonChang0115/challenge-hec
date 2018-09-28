@@ -1,0 +1,38 @@
+// scss參數
+@import './function.scss';
+@import './variable.scss';
+
+nav.page {
+  ul.pagination {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    @media screen and (max-width: $media-size-ipad) {
+      justify-content: center;
+    }
+    li.page-item {
+      width: 60px;
+      height: 60px;
+      border: 1px solid $color-light-gray;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: .3s;
+      background-color: white;
+      &.active, &:hover {
+        background-color: $color-green;
+        a.page-link {
+          color: white;
+          font-weight: bold;
+        }
+      }
+      a.page-link {
+        display: inline;
+        font-size: 20px;
+        color: $color-green;
+      }
+    }
+  }
+}
