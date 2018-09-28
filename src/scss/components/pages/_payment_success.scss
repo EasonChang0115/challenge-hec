@@ -41,15 +41,15 @@ section.banner3 {
         background-color: $color-green;
         z-index: 2;
         &:after {
-          content: '✔';
-          color: $color-light-gray;
-          font-size: 12px;
-          font-weight: bold;
-          text-align: center;
+          content: '';
+          width: 6px;
+          height: 12px;
+          border-bottom: 2px solid $color-light-gray;
+          border-right: 2px solid $color-light-gray;
           position: absolute;
-          top: 50%;
+          top: 40%;
           left: 50%;
-          transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%) rotate(45deg);
         }
       }
       .bar {
