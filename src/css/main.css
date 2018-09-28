@@ -1767,11 +1767,27 @@ section.banner2 {
       line-height: 56px;
       color: #8DA291;
       cursor: pointer;
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+         -moz-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      -webkit-box-align: center;
+         -moz-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
       -webkit-transition: .3s;
       transition: .3s; }
+      .login_page .right_social .social-block img {
+        width: 100px; }
       .login_page .right_social .social-block:hover {
-        color: white;
-        background-color: #8DA291; }
+        -webkit-transform: translateY(-5px);
+                transform: translateY(-5px);
+        -webkit-box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.2);
+                box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.2); }
   @media screen and (max-width: 768px) {
     .login_page {
       height: auto;
@@ -1812,10 +1828,24 @@ section.banner2 {
             text-align: center;
             cursor: pointer;
             -webkit-transition: .3s;
-            transition: .3s; }
+            transition: .3s;
+            display: -webkit-box;
+            display: -moz-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-pack: center;
+               -moz-box-pack: center;
+                -ms-flex-pack: center;
+                    justify-content: center;
+            -webkit-box-align: center;
+               -moz-box-align: center;
+                -ms-flex-align: center;
+                    align-items: center; }
+            .login_page .left_form .social-login .social-block img {
+              width: 80px; }
             .login_page .left_form .social-login .social-block:hover {
-              color: white;
-              background-color: #8DA291; }
+              -webkit-box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.2);
+                      box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.2); }
       .login_page .right_social {
         display: none; } }
 
