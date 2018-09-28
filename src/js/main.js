@@ -28,7 +28,7 @@
       stepTitle: [{
           title: '運送',
           component: 'step1',
-          complete: true
+          complete: false
         }, {
           title: '付款',
           component: 'step2',
