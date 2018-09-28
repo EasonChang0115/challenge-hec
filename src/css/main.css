@@ -2136,16 +2136,16 @@ section.banner2 {
             background-color: #EAF0ED;
             display: none; }
           .check-page .step-block .top-bar .progerss .circle:after {
-            content: '✔';
-            color: #3F5D45;
-            font-size: 12px;
-            font-weight: bold;
-            text-align: center;
+            content: '';
+            width: 6px;
+            height: 12px;
+            border-bottom: 2px solid #3F5D45;
+            border-right: 2px solid #3F5D45;
             position: absolute;
-            top: 50%;
+            top: 40%;
             left: 50%;
-            -webkit-transform: translate(-50%, -50%);
-                    transform: translate(-50%, -50%);
+            -webkit-transform: translate(-50%, -50%) rotate(45deg);
+                    transform: translate(-50%, -50%) rotate(45deg);
             display: none; }
         .check-page .step-block .top-bar .progerss .bar {
           width: 100%;

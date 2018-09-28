@@ -61,15 +61,15 @@
             display: none;
           }
           &:after {
-            content: '✔';
-            color: $color-green;
-            font-size: 12px;
-            font-weight: bold;
-            text-align: center;
+            content: '';
+            width: 6px;
+            height: 12px;
+            border-bottom: 2px solid $color-green;
+            border-right: 2px solid $color-green;
             position: absolute;
-            top: 50%;
+            top: 40%;
             left: 50%;
-            transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%) rotate(45deg);
             display: none;
           }
         }
