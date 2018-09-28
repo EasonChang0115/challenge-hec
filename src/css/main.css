@@ -824,7 +824,11 @@ body {
 header.my_header {
   width: 100%;
   padding: 30px 0;
-  background-color: white; }
+  background-color: white;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0px;
+  z-index: 999; }
   header.my_header .container {
     display: -webkit-box;
     display: -moz-box;
