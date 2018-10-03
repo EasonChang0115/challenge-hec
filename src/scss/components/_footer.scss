@@ -57,6 +57,14 @@ footer.my_footer {
         width: 64px;
         background-color: $color-yellow;
         color: $color-green;
+        i {
+          transition: .3s;
+        }
+        &:hover {
+          i {
+            transform: translate(5px);
+          }
+        }
       }
     }
     @media screen and (max-width: $media-size-ipad) {

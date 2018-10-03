@@ -1036,6 +1036,12 @@ footer.my_footer {
         width: 64px;
         background-color: #FFE180;
         color: #3F5D45; }
+        footer.my_footer .send_mail .input_right button.btn.send_btn i {
+          -webkit-transition: .3s;
+          transition: .3s; }
+        footer.my_footer .send_mail .input_right button.btn.send_btn:hover i {
+          -webkit-transform: translate(5px);
+                  transform: translate(5px); }
     @media screen and (max-width: 768px) {
       footer.my_footer .send_mail .container {
         display: -webkit-box;
